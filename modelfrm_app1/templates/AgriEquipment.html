@@ -1,0 +1,508 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>AgricultureEquipment</title>
+
+    </head>
+<style>
+    *{
+  margin: 0;
+  padding: 0;
+}
+
+.clear{
+  clear: both;
+}
+
+
+.slide-toggle{
+  display: none;
+}
+
+.slidemenu{
+  font-family: arial, sans-serif;
+  max-width: 600px;
+  margin: 50px auto;
+  overflow: hidden;
+}
+
+.slidemenu label{
+  width: 25%;
+  text-align: center;
+  display: block;
+  float: left;
+  color: #333;
+  opacity: 0.2;
+
+}
+
+.slidemenu label:hover{
+  cursor: pointer;
+  color: #666;
+}
+
+.slidemenu label span{
+  display: block;
+  padding: 10px;
+}
+
+.slidemenu label .icon{
+  font-size: 20px;
+  border: solid 2px #333;
+  text-align: center;
+  height: 50px;
+  width: 50px;
+  display: block;
+  margin: 0 auto;
+  line-height: 50px;
+  border-radius: 50%;
+}
+
+/*Bar Style*/
+
+.slider{
+  width: 100%;
+  height: 5px;
+  display: block;
+  background: #ccc;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.slider .bar{
+  width: 25%;
+  height: 5px;
+  background: #333;
+  border-radius: 5px;
+}
+
+/*Animations*/
+.slidemenu label, .slider .bar {
+  transition: all 500ms ease-in-out;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+}
+
+/*Toggle*/
+
+.slidemenu .slide-toggle:checked + label{
+  opacity: 1;
+}
+
+
+
+.slidemenu #slide-item-1:checked ~ .slider .bar{ margin-left: 0; }
+.slidemenu #slide-item-2:checked ~ .slider .bar{ margin-left: 25%; }
+.slidemenu #slide-item-3:checked ~ .slider .bar{ margin-left: 50%; }
+.slidemenu #slide-item-4:checked ~ .slider .bar{ margin-left: 75%; }
+
+*{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1{
+  font-size: 2.5rem;
+  font-family: 'Montserrat';
+  font-weight: normal;
+  color: #444;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.wrapper{
+  width: 90%;
+  margin: 0 auto;
+  max-width: 80rem;
+}
+
+.cols{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.col{
+  width: calc(25% - 2rem);
+  margin: 1rem;
+  cursor: pointer;
+}
+
+.container{
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+	-webkit-perspective: 1000px;
+	        perspective: 1000px;
+}
+
+.front,
+.back{
+  background-size: cover;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.25);
+  border-radius: 10px;
+	background-position: center;
+	-webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+	transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+	-o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+	transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+	transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+	-webkit-backface-visibility: hidden;
+	        backface-visibility: hidden;
+	text-align: center;
+	min-height: 280px;
+	height: auto;
+	border-radius: 10px;
+	color: #fff;
+	font-size: 1.5rem;
+}
+
+.back{
+  background: #cedce7;
+  background: -webkit-linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
+  background: -o-linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
+  background: linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
+}
+
+.front:after{
+	position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    content: '';
+    display: block;
+    opacity: .6;
+    background-color: #000;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    border-radius: 10px;
+}
+.container:hover .front,
+.container:hover .back{
+    -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.inner{
+    -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
+            transform: translateY(-50%) translateZ(60px) scale(0.94);
+    top: 50%;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    outline: 1px solid transparent;
+    -webkit-perspective: inherit;
+            perspective: inherit;
+    z-index: 2;
+}
+
+.container .back{
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+}
+
+.container .front{
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+}
+
+.container:hover .back{
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.container:hover .front{
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.front .inner p{
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.front .inner p:after{
+  content: '';
+  width: 4rem;
+  height: 2px;
+  position: absolute;
+  background: #C6D4DF;
+  display: block;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: -.75rem;
+}
+
+.front .inner span{
+  color: rgba(255,255,255,0.7);
+  font-family: 'Montserrat';
+  font-weight: 300;
+}
+
+@media screen and (max-width: 64rem){
+  .col{
+    width: calc(33.333333% - 2rem);
+  }
+}
+
+@media screen and (max-width: 48rem){
+  .col{
+    width: calc(50% - 2rem);
+  }
+}
+
+@media screen and (max-width: 32rem){
+  .col{
+    width: 100%;
+    margin: 0 0 2rem 0;
+  }
+}
+</style>
+
+<body>
+	<nav class="slidemenu">
+
+    <!-- Item 1 -->
+  <input type="radio" name="slideItem" id="slide-item-1" class="slide-toggle"  checked/>
+  <label   for="slide-item-1"><a href="http://127.0.0.1:8000/mainhome/"    class="icon">★</a><span >Home</span></label>
+
+  <!-- Item 2 -->
+  <input type="radio" name="slideItem" id="slide-item-2" class="slide-toggle"/>
+
+  <label for="slide-item-2"><a href="http://127.0.0.1:8000/agriculture/" class="icon">★</a ><span>Agriculture</span></label>
+
+  <!-- Item 3 -->
+  <input type="radio" name="slideItem" id="slide-item-3" class="slide-toggle"/>
+  <label for="slide-item-3"><a  href="http://127.0.0.1:8000/aquaculture/"class="icon">★</a><span>Aquaculture</span></label>
+
+  <!-- Item 4 -->
+   <input type="radio" name="slideItem" id="slide-item-4" class="slide-toggle"/>
+  <label for="slide-item-4"><a href="http://127.0.0.1:8000/image/" class="icon">★</a><span>Blog</span></label>
+
+  <div class="clear"></div>
+  <!-- Bar -->
+  <div class="slider">
+    <div class="bar"></div>
+  </div>
+
+</nav>
+</body>
+<div class="wrapper">
+  <h1>Equipment</h1>
+  <div class="cols">
+			<div class="col" ontouchstart="this.classList.toggle('hover');">
+				<div class="container">
+					<div class="front" style="background-image: url(https://lucknowproducts.com/content/products/rotary-tillers/@product/tiller.jpg)">
+						<div class="inner">
+							<p>Rotary Tillers</p>
+              <span>Equipment</span>
+						</div>
+					</div>
+					<div class="back">
+						<div class="inner">
+						  <p>It works the soil by means of rotating tines or blades, and is either self propelled or drawn as an attachment behind either a two-wheel tractor or four-wheel tractor.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col" ontouchstart="this.classList.toggle('hover');">
+				<div class="container">
+					<div class="front" style="background-image:url(https://blog.machinefinder.com/wp-content/uploads/2019/07/tseries-combine-r2C001197-1024x576.jpg)">
+						<div class="inner">
+							<p>Combine Harvester</p>
+              <span>Machinery</span>
+						</div>
+					</div>
+					<div class="back">
+						<div class="inner">
+							<p>The modern combined harvester, or simply combine, is a versatile machine designed to efficiently harvest a variety of grain crops.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col" ontouchstart="this.classList.toggle('hover');">
+				<div class="container">
+					<div class="front" style="background-image: url(https://5.imimg.com/data5/CJ/MA/MY-3576722/hydraulic-disc-harrow-500x500.jpg)">
+						<div class="inner">
+							<p>Hydraulic Harrow</p>
+              <span>Equipment</span>
+						</div>
+					</div>
+					<div class="back">
+						<div class="inner">
+							<p>Can be used for both, surface disc harrowing (superficial ploughing) and intensive deep ploughing.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col" ontouchstart="this.classList.toggle('hover');">
+				<div class="container">
+					<div class="front" style="background-image: url(https://www.tractorjunction.com/assets/images/images/implementTractor/974-laser-land-leveler-19-1589366078.jpg)">
+						<div class="inner">
+							<p>laser guided land leveller</p>
+              <span>Machinery</span>
+						</div>
+					</div>
+					<div class="back">
+						<div class="inner">
+							<p>UNIVERSAL Laser guided land levellers perfectly level the ploughed field and make it ready for cultivation. </p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col" ontouchstart="this.classList.toggle('hover');">
+				<div class="container">
+					<div class="front" style="background-image: url(https://4.imimg.com/data4/EC/NC/GLADMIN-786883/heavy-duty-land-leveller-500x500.jpg)">
+						<div class="inner">
+							<p>Heavy Duty Land Leveller</p>
+              <span>Equipment</span>
+						</div>
+					</div>
+					<div class="back">
+						<div class="inner">
+							<p>UNIVERSAL land levelers increase productivity and help save on the cost of irrigation.Available in 6, 7 and 8 feet width. </p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col" ontouchstart="this.classList.toggle('hover');">
+				<div class="container">
+					<div class="front" style="background-image: url(https://3.imimg.com/data3/BC/WM/MY-13238902/land-leveller-500x500.jpg)">
+						<div class="inner">
+							<p>Reversible Land Leveller</p>
+              <span>Equipment</span>
+						</div>
+					</div>
+					<div class="back">
+						<div class="inner">
+							<p>UNIVERSAL Reversible land leveler has dual three point linkages. One side of implement is used to cut the soil and to drag the same. The other side of implement is used to drag and fine level the surface of soil. </p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col" ontouchstart="this.classList.toggle('hover');">
+				<div class="container">
+					<div class="front" style="background-image: url(https://img2.exportersindia.com/product_images/bc-full/dir_70/2079125/disc-ridger-604837.jpg)">
+						<div class="inner">
+							<p>Disc Ridgers</p>
+              <span>Equipment</span>
+						</div>
+					</div>
+					<div class="back">
+						<div class="inner">
+							<p>The discs of UNIVERSAL disc ridgers are adjustable along the frame to vary bund (Ridge) width and height. </p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col" ontouchstart="this.classList.toggle('hover');">
+				<div class="container">
+					<div class="front" style="background-image: url(https://5.imimg.com/data5/NJ/VK/MY-4585844/tyne-ridger-500x500.jpg)">
+						<div class="inner">
+							<p>Tyne Ridger</p>
+              <span>Equipment</span>
+						</div>
+					</div>
+					<div class="back">
+						<div class="inner">
+							<p>UNIVERSAL Tyne Ridgers quickly and economically make simple soil ridges.The furrows can be easily spaced (widened or narrowed) as per the crop requirement.  </p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col" ontouchstart="this.classList.toggle('hover');">
+				<div class="container">
+					<div class="front" style="background-image: url(https://4.imimg.com/data4/VM/XK/GLADMIN-16995572/0-500x500.jpg)">
+						<div class="inner">
+							<p>Rotary Slasher/Cutter(Square Design)</p>
+              <span>Equipment</span>
+						</div>
+					</div>
+					<div class="back">
+						<div class="inner">
+							<p>Easily cuts thick and tall weeds and grass. Offers adjustable grass cutting height upto as low as 25 mm.Highly useful for cutting rough & tough shrubs spread in large area. </p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col" ontouchstart="this.classList.toggle('hover');">
+				<div class="container">
+					<div class="front" style="background-image: url(https://www.tractorjunction.com/assets/images/images/implementTractor/rotary-slasher-cutter-round-design-27-1608978788.jpg)">
+						<div class="inner">
+							<p>Rotary Slasher/Cutter(Round Design)</p>
+              <span>Equipment</span>
+						</div>
+					</div>
+					<div class="back">
+						<div class="inner">
+							<p>Easily cuts thick and tall weeds and grass. Offers adjustable grass cutting height upto as low as 25 mm. Highly useful for cutting rough & tough shrubs spread in large area. </p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col" ontouchstart="this.classList.toggle('hover');">
+				<div class="container">
+					<div class="front" style="background-image: url(https://5.imimg.com/data5/VX/IC/MY-116462/sub-soiler-250x250.jpg)">
+						<div class="inner">
+							<p>Sub Soilers</p>
+              <span>Equipment</span>
+						</div>
+					</div>
+					<div class="back">
+						<div class="inner">
+							<p>The angled wings lift and shatter the hard pan that builds up due to compaction.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col" ontouchstart="this.classList.toggle('hover');">
+				<div class="container">
+					<div class="front" style="background-image: url(https://2.wlimg.com/product_images/bc-full/dir_138/4111080/multi-speed-gear-drive-1479801023-2580892.jpeg)">
+						<div class="inner">
+							<p>Disc Ridgers</p>
+              <span>Equipment</span>
+						</div>
+					</div>
+					<div class="back">
+						<div class="inner">
+							<p>Prepares the seed bed quickly and economically. Gear drive. Multi speed gearbox. Compatible with 540 and 1000 PTO RPM. Suitable for use in dry as well as wet land conditions.  </p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+ </div>

@@ -1,0 +1,183 @@
+<style>
+     *{
+  margin: 0;
+  padding: 0;
+}
+
+.clear{
+  clear: both;
+}
+
+
+.slide-toggle{
+  display: none;
+}
+
+.slidemenu{
+  font-family: arial, sans-serif;
+  max-width: 600px;
+  margin: 50px auto;
+  overflow: hidden;
+}
+
+.slidemenu label{
+  width: 25%;
+  text-align: center;
+  display: block;
+  float: left;
+  color: #333;
+  opacity: 0.2;
+
+}
+
+.slidemenu label:hover{
+  cursor: pointer;
+  color: #666;
+}
+
+.slidemenu label span{
+  display: block;
+  padding: 10px;
+}
+
+.slidemenu label .icon{
+  font-size: 20px;
+  border: solid 2px #333;
+  text-align: center;
+  height: 50px;
+  width: 50px;
+  display: block;
+  margin: 0 auto;
+  line-height: 50px;
+  border-radius: 50%;
+}
+
+/*Bar Style*/
+
+.slider{
+  width: 100%;
+  height: 5px;
+  display: block;
+  background: #ccc;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.slider .bar{
+  width: 25%;
+  height: 5px;
+  background: #333;
+  border-radius: 5px;
+}
+
+/*Animations*/
+.slidemenu label, .slider .bar {
+  transition: all 500ms ease-in-out;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+}
+
+/*Toggle*/
+
+.slidemenu .slide-toggle:checked + label{
+  opacity: 1;
+}
+
+
+
+.slidemenu #slide-item-1:checked ~ .slider .bar{ margin-left: 0; }
+.slidemenu #slide-item-2:checked ~ .slider .bar{ margin-left: 25%; }
+.slidemenu #slide-item-3:checked ~ .slider .bar{ margin-left: 50%; }
+.slidemenu #slide-item-4:checked ~ .slider .bar{ margin-left: 75%; }
+
+</style>
+
+
+<body style="background-color:skyblue;">
+<nav class="slidemenu">
+
+  <!-- Item 1 -->
+  <input type="radio" name="slideItem" id="slide-item-1" class="slide-toggle"  checked/>
+  <label   for="slide-item-1"><a href="http://127.0.0.1:8000/mainhome/"    class="icon">★</a><span >Home</span></label>
+
+  <!-- Item 2 -->
+  <input type="radio" name="slideItem" id="slide-item-2" class="slide-toggle"/>
+
+  <label for="slide-item-2"><a href="http://127.0.0.1:8000/agriculture/" class="icon">★</a ><span>Agriculture</span></label>
+
+  <!-- Item 3 -->
+  <input type="radio" name="slideItem" id="slide-item-3" class="slide-toggle"/>
+  <label for="slide-item-3"><a  href="http://127.0.0.1:8000/aquaculture/"class="icon">★</a><span>Aquaculture</span></label>
+
+  <!-- Item 4 -->
+  <input type="radio" name="slideItem" id="slide-item-4" class="slide-toggle"/>
+  <label for="slide-item-4"><a href="http://127.0.0.1:8000/image/" class="icon">★</a><span>Blog</span></label>
+
+  <div class="clear"></div>
+
+  <!-- Bar -->
+  <div class="slider">
+    <div class="bar"></div>
+  </div>
+
+</nav>
+  <div>
+    <h1 align="center"">FERTILIZERS</h1>
+	<div style="text-align: center;">
+	<img src="http://www.fao.org/fishery/static/FAO_Training/FAO_Training/General/x6709e/GR000291.JPG">
+
+   <p style=font-size:20px >
+    1. Fertilizers are natural or synthetic substances that are used in ponds to increase the production of the natural food organisms to be eaten by the fish. These organisms include phytoplankton*, zooplankton* and insects (see Chapter 10, ). They are all part of a complex food web* converging toward fish production. By increasing the availability of major nutrients, fertilizers promote the development of planktonic algae, which provide food for many fish. Fertilization also leads to the development of animals which feed on algae, including some fish such as the Chinese silver carp and the Nile tilapia.
+ </p>
+  <p style=font-size:20px >
+2. When a fertilizer is added to a fish pond, the chemicals it contains dissolve in the water, where:
+
+a portion is usually rapidly taken up by the phytoplankton present, either to be stored, sometimes in quite large proportions, or to be assimilated and used for growth, reproduction, etc.;
+another portion is attracted by and becomes attached to the organic and mineral particles present, both in the pond water  and in the upper layers of the bottom mud or soil.
+ </p >
+  <p style=font-size:20px >
+3. This second portion may also assist the development of bacteria, responsible for the decomposition of organic matter. The decomposition of organic matter may in turn release more nutrients back into the mud or water. The chemicals attached to soil particles may also later be released back into the water slowly, over a long period of time. They may also migrate deeper into mud and soil, where they will no longer affect the water body, unless the pond bottom is dried or ploughed (see Section 2.5).
+ </p>
+  <p style=font-size:20px >
+4. Most of these phenomena are linked with and controlled by water quality and in particular temperature, pH, alkalinity and dissolved oxygen level.
+
+
+
+ </p>
+ <div style="text-align: center;">
+  <img src="http://www.fao.org/fishery/static/FAO_Training/FAO_Training/General/x6709e/GR000292.JPG">
+
+ <p style=font-size:20px >
+  5. Pond fertilizers form two distinct groups:
+
+mineral or inorganic fertilizers, which contain only mineral nutrients and no organic matter; they are manufactured industrially to be used in agriculture for improving crop production and they can be obtained from specialized suppliers;
+organic fertilizers, which contain a mixture of organic matter and mineral nutrients; they are produced locally, for example as wastes from farm animals or as agricultural wastes.
+  </p>
+    <p style=font-size:20px >
+6. Both types of fertilizer have advantages and disadvantages, . Select the most appropriate type of fertilization for your own needs. Selection may depend not only on local availability but also on the size of the farm.
+
+(a) Small-scale fish farms tend to rely on organic fertilizers as they are cheap and available locally.
+
+(b) Large-scale fish farms most often adopt inorganic fertilizers, as they are more easily stored and distributed.
+  </p>
+  <p style=font-size:20px >
+7. The best results can often be obtained with the combined use of both types of fertilizer
+
+  </p >
+  <p style=font-size:20px>
+  10. If supplies of fertilizer are limited, give priority to the ponds where the availability of natural food is most important, for example nursery ponds and broodstock ponds.
+  </p>
+  <p style=font-size:22px>
+  11. Do not fertilize a pond if:
+</p>
+  <p style=font-size:20px>
+fish production does not depend on the use of natural food;
+the exchange rate of the water is excessive;
+there is too much emersed or other aquatic vegetation;
+the water is too muddy or dark-coloured, and transparency is limited;
+the plankton turbidity is too high.
+  </p>
+
+
+  </div>
+</section>

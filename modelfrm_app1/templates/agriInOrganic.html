@@ -1,0 +1,316 @@
+<style >
+    @import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+}
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:300);
+.fa-2x {
+font-size: 2em;
+}
+.fa {
+position: relative;
+display: table-cell;
+width: 60px;
+height: 36px;
+text-align: center;
+vertical-align: middle;
+font-size:20px;
+}
+
+
+.main-menu:hover,nav.main-menu.expanded {
+width:250px;
+overflow:visible;
+}
+
+.main-menu {
+background:#212121;
+border-right:1px solid #e5e5e5;
+position:absolute;
+top:0;
+bottom:0;
+height:100%;
+left:0;
+width:60px;
+overflow:hidden;
+-webkit-transition:width .05s linear;
+transition:width .05s linear;
+-webkit-transform:translateZ(0) scale(1,1);
+z-index:1000;
+}
+
+.main-menu>ul {
+margin:7px 0;
+}
+
+.main-menu li {
+position:relative;
+display:block;
+width:250px;
+}
+
+.main-menu li>a {
+position:relative;
+display:table;
+border-collapse:collapse;
+border-spacing:0;
+color:#999;
+ font-family: arial;
+font-size: 14px;
+text-decoration:none;
+-webkit-transform:translateZ(0) scale(1,1);
+-webkit-transition:all .1s linear;
+transition:all .1s linear;
+  
+}
+
+.main-menu .nav-icon {
+position:relative;
+display:table-cell;
+width:60px;
+height:36px;
+text-align:center;
+vertical-align:middle;
+font-size:18px;
+}
+
+.main-menu .nav-text {
+position:relative;
+display:table-cell;
+vertical-align:middle;
+width:190px;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.main-menu>ul.logout {
+position:absolute;
+left:0;
+bottom:0;
+}
+
+.no-touch .scrollable.hover {
+overflow-y:hidden;
+}
+
+.no-touch .scrollable.hover:hover {
+overflow-y:auto;
+overflow:visible;
+}
+
+a:hover,a:focus {
+text-decoration:none;
+}
+
+nav {
+-webkit-user-select:none;
+-moz-user-select:none;
+-ms-user-select:none;
+-o-user-select:none;
+user-select:none;
+}
+
+nav ul,nav li {
+outline:0;
+margin:0;
+padding:0;
+}
+.main-menu li:hover>a,nav.main-menu li.active>a,.dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus,.dropdown-menu>.active>a,.dropdown-menu>.active>a:hover,.dropdown-menu>.active>a:focus,.no-touch .dashboard-page nav.dashboard-menu ul li:hover a,.dashboard-page nav.dashboard-menu ul li.active a {
+color:#fff;
+background-color:#5fa2db;
+}
+.area {
+float: left;
+background: #e2e2e2;
+width: 100%;
+height: 100%;
+}
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Titillium WebLight'), local('TitilliumWeb-Light'), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v2/anMUvcNT0H1YN4FII8wpr24bNCNEoFTpS2BTjF6FB5E.woff) format('woff');
+}
+
+
+body{
+    background-color: lightgreen;
+    padding: 0px;
+    margin:0px;
+    width:100%;
+    height:100vh;
+    font-family: 'Lato';
+}
+.wrapper{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width:100%;
+    max-width: 650px;
+    height:auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.card{
+    flex: 1;
+    flex-basis: 300px;
+    flex-grow: 0;
+    height: 440px;
+    background: #fff;
+    border: 2px solid #fff;
+    box-shadow: 0px 4px 7px rgba(0,0,0,.5);
+    cursor: pointer;
+    transition: all .5s cubic-bezier(.8,.5,.2,1.4);
+    overflow: hidden;
+    position: relative;
+}
+.card img{
+    width: 100%;
+    height:100%;
+    transition: all .5s cubic-bezier(.8,.5,.2,1.4);
+}
+.descriptions{
+    position: absolute;
+    top:0px;
+    left:0px;
+    background-color: rgba(255,255,255,.7);
+    width:100%;
+    height:100%;
+    transition: all .7s ease-in-out;
+    padding: 20px;
+    box-sizing: border-box;
+    clip-path: circle(0% at 100% 100%);
+}
+.card:hover .descriptions{
+    left:0px;
+    transition: all .7s ease-in-out;
+    clip-path: circle(75%);
+}
+.card:hover{
+    transition: all .5s cubic-bezier(.8,.5,.2,1.4);
+    box-shadow: 0px 2px 3px rgba(0,0,0,.3);
+    transform: scale(.97);
+}
+.card:hover img{
+    transition: all .5s cubic-bezier(.8,.5,.2,1.4);
+    transform: scale(1.6) rotate(20deg);
+    filter: blur(3px);
+}
+.card h1{
+    color: #ff3838;
+    letter-spacing: 1px;
+    margin: 0px;
+}
+.card p{
+    line-height: 24px;
+    height: 70%;
+}
+.card button{
+    width: fit-content;
+    height: 40px;
+    cursor: pointer;
+    border-style: none;
+    background-color: #ff3838;
+    color:#fff;
+    font-size: 15px;
+    outline: none;
+    box-shadow: 0px 2px 3px rgba(0,0,0,.4);
+    transition: all .5s ease-in-out;
+}
+.card button:hover{
+    transform: scale(.95) translateX(-5px);
+    transition: all .5s ease-in-out;
+}
+
+
+
+/*  footer   */
+footer {
+    background-color: #222;
+    color: #fff;
+    font-size: 14px;
+    bottom: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 999;
+}
+
+footer p {
+    margin: 10px 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida  Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+footer .fa-heart{
+    color: red;
+}
+footer .fa-dev{
+    color: #fff;
+}
+
+</style>
+<body>
+<div class="wrapper">
+
+        <div class="card">
+		
+            <img src=https://images-na.ssl-images-amazon.com/images/I/51e7Mq7fq7L._AC_.jpg>
+
+			<div class="descriptions">
+                <h1>NITROGEN</h1>
+                <p>
+				  Nitrogen (N) is one of the most widely distributed elements in nature, since it’s the most abundant gas in the atmosphere. While N isn’t found in mineral forms like phosphorus (P) or potassium (K), it’s largely present in organic compounds. Soil-based N undergoes many complex biological transformations that make it challenging to manage.
+				</p>
+                
+                <button>
+                    <i class="fab fa-youtube"></i>
+                    More Details
+                </button>
+				
+            </div>
+        </div>
+        <div class="card">
+            <img src=https://wholegardener.com/wp-content/uploads/2014/03/Potassium.jpg>
+			<div class="descriptions">
+                <h1>POTASSIUM</h1>
+                <p>
+				Potassium fertilizer is sometimes called potash fertilizer. This is because potassium fertilizers often contain a substance called potash. Compost made primarily from food byproducts is an excellent source of potassium.Potassium is the third key nutrient of commercial fertilizers. It helps strengthen plants’ abilities to resist disease and plays an important role in increasing crop yields and overall quality. 
+                </p>
+                <button>
+                    <i class="fab fa-youtube"></i>
+                 More details
+                </button>
+            </div>
+        </div>
+    </div>
+	<div class="area"></div><nav class="main-menu">
+            <ul>
+                <li>
+                    <a href="http://127.0.0.1:8000/mainhome/">
+                        <i class="fa fa-home fa-2x"></i>
+                        <span class="nav-text">
+                            Home
+                        </span>
+                    </a>
+
+                </li>
+
+
+                <li>
+                    <a href="http://127.0.0.1:8000/agriculture/">
+                        <i class="fa fa-bar-chart-o fa-2x"></i>
+                        <span class="nav-text">
+                            Agriculture
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://127.0.0.1:8000/aquaculture/">
+                        <i class="fa fa-font fa-2x"></i>
+                        <span class="nav-text">
+                          Aqucaculture
+                        </span>
+                    </a>
+                </li>
+
+        </nav>
+</body>

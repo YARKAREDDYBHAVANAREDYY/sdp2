@@ -1,0 +1,450 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Agriculture</title>
+    <div id="google_translate_element"></div>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <script>
+    if (document.documentMode || /Edge/.test(navigator.userAgent)) {
+        alert('Please use Chrome or Firefox for best browsing experience!');
+    }
+
+  </script>
+
+  <!-- load CSS -->
+    {% load static %}
+  <link rel="stylesheet" href="{% static 'https://fonts.googleapis.com/css?family=Open+Sans:300,400'%}">  <!-- Google web font "Open Sans" -->
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">                                      <!-- https://getbootstrap.com/ -->
+  <link rel="stylesheet" href="{% static 'css/fontawesome-all.min.css'%}">                                <!-- Font awesome -->
+  <link rel="stylesheet" href="{% static 'slick/slick.css'%}">
+  <link rel="stylesheet" href="{% static 'slick/slick-theme.css'%}">
+  <link rel="stylesheet" href="{% static 'css/templatemo-style.css'%}">                                     <!-- Templatemo style -->
+
+</head>
+<style>
+
+</style>
+
+<body>
+ <html>
+  <head>
+
+  </head>
+  <body><div class="area"></div><nav class="main-menu">
+            <ul>
+                <li>
+                    <a href="http://127.0.0.1:8000/mainhome/">
+                        <i class="fa fa-home fa-2x"></i>
+                        <span class="nav-text">
+                            Home
+                        </span>
+                    </a>
+
+                <li class="has-subnav">
+                    <a href="http://127.0.0.1:8000/agriculture/">
+                       <i class="fa fa-crop fa-2x"></i>
+
+                        <span class="nav-text">
+                             Agriculture
+                        </span>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="http://127.0.0.1:8000/agriseeds/">
+                        <i class="fa fa-bar-chart-o fa-2x"></i>
+                        <span class="nav-text">
+                            seed Details
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://127.0.0.1:8000/agriOrganic/">
+                        <i class="fa fa-bar-chart-o fa-2x"></i>
+                        <span class="nav-text">
+                           Fertilizers Details
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://127.0.0.1:8000/agriEquipment/">
+                        <i class="fa fa-bar-chart-o fa-2x"></i>
+                        <span class="nav-text">
+                            Agriculture Equipment
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://127.0.0.1:8000/agriweather/">
+                        <i class="fa fa-bar-chart-o fa-2x"></i>
+                        <span class="nav-text">
+                            Weather Forecasting
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://127.0.0.1:8000/agriSoil/">
+                        <i class="fa fa-bar-chart-o fa-2x"></i>
+                        <span class="nav-text">
+                            Soil Details
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://127.0.0.1:8000/predict/">
+                        <i class="fa fa-bar-chart-o fa-2x"></i>
+                        <span class="nav-text">
+                            Prediction
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://127.0.0.1:8000/agriirrigation/">
+                        <i class="fa fa-bar-chart-o fa-2x"></i>
+                        <span class="nav-text">
+                            Irrigation
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://127.0.0.1:8000/show/">
+                        <i class="fa fa-bar-chart-o fa-2x"></i>
+                        <span class="nav-text">
+                            Fertilizer Best Options
+                        </span>
+                    </a>
+                </li>
+                 <li>
+                    <a href="http://127.0.0.1:8000/Fpredict/">
+                        <i class="fa fa-bar-chart-o fa-2x"></i>
+                        <span class="nav-text">
+                            Fertilizer Prediction
+                        </span>
+                    </a>
+                </li>
+                <li class="has-subnav">
+                    <a href="http://127.0.0.1:8000/aquaculture/">
+                       <i class="fa fa-industry fa-2x"></i>
+                        <span class="nav-text">
+                            Aquaculture
+                        </span>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="http://127.0.0.1:8000/timeline/">
+                        <i class="fa fa-bar-chart-o fa-2x"></i>
+                        <span class="nav-text">
+                            Aquatic Animals Timeline
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://127.0.0.1:8000/aquafertilizers/">
+                        <i class="fa fa-bar-chart-o fa-2x"></i>
+                        <span class="nav-text">
+                            Fertilizers
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://127.0.0.1:8000/aquaEquipment/">
+                        <i class="fa fa-bar-chart-o fa-2x"></i>
+                        <span class="nav-text">
+                            Equipment
+                        </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="http://127.0.0.1:8000/aquaWater/">
+                        <i class="fa fa-bar-chart-o fa-2x"></i>
+                        <span class="nav-text">
+                            Water Details
+                        </span>
+                    </a>
+                </li>
+
+            <ul class="logout">
+                <li>
+                   <a href="http://127.0.0.1:8000/">
+                         <i class="fa fa-power-off fa-2x"></i>
+                        <span class="nav-text">
+                            Logout
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+  </body>
+    </html>
+  <!-- Loader -->
+  <div id="loader-wrapper">
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+  </div>
+
+  <div class="container">
+    <div class="tm-top-bar"></div>
+
+    <!-- Welcome section -->
+    <section class="tm-welcome">
+
+      <div class="tm-welcome-left">
+        <!-- Logo -->
+        <div class="tm-logo">
+          <h1 class="tm-site-name"></h1>
+             <img src="{% static 'images/logo-bg.png' %}"  width="370px" height="370px"   />
+        </div>
+        <div class="tm-welcome-content">
+          <!-- fa icons -->
+          <div class="tm-welcome-icons-container">
+
+          </div>
+
+          <h2 class="tm-mb-25">Agriculture</h2>
+
+          <p class="tm-font-big"><a rel="nofollow"/>
+            <p>Agriculture and aquaculture system is the website application which was built for the utilization of both the farmers and also for the common man who was willing to invest money in agriculture."</p>
+          <a href="#" class="tm-welcome-link tm-font-big"></a>
+
+
+        </div>
+      </div>
+      <div class="tm-welcome-right"></div>
+
+    </section>
+    <div class="tm-bar-2"></div>
+
+    <section class="row tm-section-mb tm-section-2">
+      <div class="col-md-12 tm-section-2-inner">
+        <div class="tm-section-2-left">
+
+              <div class="tm-img-container tm-img-container-1"></div>
+             <figure><img src="{% static 'images/green-tree-red-cup.jpg'%}"></figure>
+              <div class="tm-img-container tm-img-container-2"></div>
+
+        </div>
+        <div class="tm-section-2-right tm-bg-primary">
+          <div class="tm-section-2-text">
+
+            <h2 class="tm-section-2-header tm-mb-45">Seed Details</h2>
+            <p>A crop is a plant or plant product that can be grown and harvested for profit or subsistence. By use, crops fall into six categories: food crops, feed crops, fiber crops, oil crops, ornamental crops, and industrial crops.Food crops, such as fruit and vegetables, are harvested for human consumption. Grains, such as corn, wheat, and rice, are the world’s most popular food crops.Food crops were the first crops to be harvested through agriculture. Agricultural development and the growth of civilizations led to the diversity of other types of crops.</p>
+                <a href="http://127.0.0.1:8000/agriseeds/" class="d-block tm-welcome-link">Continue...</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="row tm-section-3">
+      <div class="col-md-12 tm-section-3-inner">
+        <div class="tm-section-3-left tm-bg-primary">
+          <div class="tm-section-3-text">
+            <h2 class="tm-section-3-header tm-mb-35">Fertilizers Details</h2>
+            <p>Fertilizers are chemical substances supplied to the crops to increase their productivity. These are used by the farmers daily to increase the crop yield. The fertilizers contain the essential nutrients required by the plants, including nitrogen, potassium, and phosphorus. They enhance the water retention capacity of the soil and also increase its fertility.</p>
+            <a href="http://127.0.0.1:8000/agriOrganic/" class="d-block tm-welcome-link"> Organic Fertilizers Continue...</a>
+              <a href="http://127.0.0.1:8000/agriInOrganic/" class="d-block tm-welcome-link">InOrganic Fertilizers Continue...</a>
+          </div>
+        </div>
+        <div class="tm-section-3-right">
+            <figure><img src="{% static 'images/backpack-guy.jpg'%}"></figure>
+          <div class="tm-img-container tm-img-container-3"></div>
+            <div class="tm-img-container tm-img-container-2"></div>
+        </div>
+      </div>
+
+  </section>
+
+  <section class="row tm-section-mb tm-section-4">
+      <div class="col-md-12 tm-section-2-inner">
+        <div class="tm-section-2-left">
+<figure><img src="{% static 'images/eq1.jpg'%}"></figure>
+              <div class="tm-img-container tm-img-container-4"></div>
+               <figure><img src="{% static 'images/eq2.jpg'%}"></figure>
+              <div class="tm-img-container tm-img-container-5"></div>
+        </div>
+        <div class="tm-section-2-right tm-bg-primary">
+          <div class="tm-section-2-text">
+            <h2 class="tm-section-2-header tm-mb-45">Agriculture Equipment</h2>
+            <p>A combine harvester is used for the processes of farming such as reaping, threshing, and winnowing. Combine Harvester is the best machine that is used to harvest all types of crops like barley, wheat, rye, oats, corn, and much more. To increase farming activities a combine harvester is a perfect option for you.</p>
+                <a href="http://127.0.0.1:8000/agriEquipment/" class="d-block tm-welcome-link">Continue...</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="row tm-section-6">
+      <div class="col-md-12 tm-section-3-inner">
+        <div class="tm-section-3-left tm-bg-primary">
+          <div class="tm-section-3-text">
+            <h2 class="tm-section-3-header tm-mb-35">Weather Forecasting</h2>
+            <p>Weather forecasts for agriculture can be grouped into short range forecast (up to 48 hours), medium range forecast (3-10 days) and long range forecast (one week to entire season). Each plays an important role in farm operations and planning of agricultural activities.</p>
+            <a href="http://127.0.0.1:8000/agriweather/" class="d-block tm-welcome-link">Continue...</a>
+          </div>
+        </div>
+        <div class="tm-section-3-right">
+            <figure><img src="{% static 'images/we.jpg'%}"></figure>
+          <div class="tm-img-container tm-img-container-6"></div>
+
+        </div>
+      </div>
+  </section>
+
+
+
+    <section class="row tm-section-mb tm-section-7">
+      <div class="col-md-12 tm-section-2-inner">
+        <div class="tm-section-2-left">
+
+              <div class="tm-img-container tm-img-container-7"></div>
+<figure><img src="{% static 'images/so2.jpg'%}"></figure>
+              <div class="tm-img-container tm-img-container-8"></div>
+ <figure><img src="{% static 'images/so1.jpg'%}"></figure>
+        </div>
+        <div class="tm-section-2-right tm-bg-primary">
+          <div class="tm-section-2-text">
+            <h2 class="tm-section-2-header tm-mb-45">Soil Details</h2>
+            <p>In India, the Indian Council of Agricultural Research (ICAR) has classified soils into 8 categories. Alluvial Soil, Black Cotton Soil, Red Soil, Laterite Soil, Mountainous or Forest Soils, Arid or Desert Soil, Saline and Alkaline Soil, Peaty, and Marshy Soil are the categories of Indian Soil.</p>
+                <a href="http://127.0.0.1:8000/agriSoil/" class="d-block tm-welcome-link">Continue...</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="row tm-section-9">
+      <div class="col-md-12 tm-section-3-inner">
+        <div class="tm-section-3-left tm-bg-primary">
+          <div class="tm-section-3-text">
+            <h2 class="tm-section-9-header tm-mb-35">Prediction</h2>
+            <p>Crop yield prediction is an important agricultural problem. The Agricultural yield primarily depends on weather conditions (rain, temperature, etc), pesticides.Accurate information about history of crop yield is important for making decisions related to agricultural risk management and future predictions`</p>
+            <a href="http://127.0.0.1:8000/predict/" class="d-block tm-welcome-link">Continue...</a>
+          </div>
+        </div>
+        <div class="tm-section-3-right">
+             <figure><img src="{% static 'images/po.jpg'%}"></figure>
+          <div class="tm-img-container tm-img-container-9"></div>
+        </div>
+      </div>
+  </section>
+
+
+  <section class="row tm-section-mb tm-section-10">
+      <div class="col-md-12 tm-section-2-inner">
+        <div class="tm-section-2-left">
+              <div class="tm-img-container tm-img-container-10"></div>
+            <figure><img src="{% static 'images/ir1.jpg'%}"></figure>
+
+            <div class="tm-img-container tm-img-container-11"></div>
+
+            <figure><img src="{% static 'images/ir2.jpg'%}"></figure>
+        </div>
+        <div class="tm-section-2-right tm-bg-primary">
+          <div class="tm-section-2-text">
+            <h2 class="tm-section-2-header tm-mb-45">Irrigation</h2>
+            <p>India's irrigation is mostly groundwater well based. At 39 million hectares (67% of its total irrigation), India has the world's largest groundwater well equipped irrigation system (China with 19 mha is second, USA with 17 mha is third). India has spent ₹ 16,590 crore on irrigation development between 1950 and 1985.</p>
+                <a href="http://127.0.0.1:8000/agriirrigation/" class="d-block tm-welcome-link">Continue...</a>
+          </div>
+        </div>
+      </div>
+    </section>
+      <section class="row tm-section-12">
+      <div class="col-md-12 tm-section-3-inner">
+        <div class="tm-section-3-left tm-bg-primary">
+          <div class="tm-section-3-text">
+            <h2 class="tm-section-9-header tm-mb-35">Fertilizers Best Options</h2>
+            <p>Fertilizers are chemical substances supplied to the crops to increase their productivity. These are used by the farmers daily to increase the crop yield. The fertilizers contain the essential nutrients required by the plants, including nitrogen, potassium, and phosphorus.</p>
+            <a href="http://127.0.0.1:8000/show/" class="d-block tm-welcome-link">Continue...</a>
+          </div>
+        </div>
+        <div class="tm-section-3-right">
+             <figure><img src="{% static 'images/hello.jpg'%}"></figure>
+          <div class="tm-img-container tm-img-container-9"></div>
+        </div>
+      </div>
+  </section>
+<section class="row tm-section-mb tm-section-13">
+      <div class="col-md-12 tm-section-2-inner">
+        <div class="tm-section-2-left">
+              <div class="tm-img-container tm-img-container-10"></div>
+            <figure><img src="{% static 'images/pre.jpg'%}"></figure>
+
+            <div class="tm-img-container tm-img-container-11"></div>
+
+            <figure><img src="{% static 'images/pre1.jpg'%}"></figure>
+        </div>
+        <div class="tm-section-2-right tm-bg-primary">
+          <div class="tm-section-2-text">
+            <h2 class="tm-section-2-header tm-mb-45">Fertilizer Prediction</h2>
+            <p>Crop yield prediction is an important agricultural problem. The Agricultural yield primarily depends on weather conditions (rain, temperature, etc), pesticides.Accurate information about history of crop yield is important for making decisions related to agricultural risk management and future predictions</p>
+                <a href="http://127.0.0.1:8000/Fpredict/" class="d-block tm-welcome-link">Continue...</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <section class="row tm-section-pt tm-section-pb">
+    <div class="col-md-6 mx-auto text-center">
+      <h2 class="tm-text-dark tm-mb-50">THE COMMUNITY</h2>
+      <p class="tm-text-light-dark tm-font-big">People who care about protecting farmland and healthy, local food come together to build and support community farms in their neighbourhoods. Some assist the community groups that are needed to govern the farm, some want to farm and value the collaborative approach of the community farm model, and others simply wish to enjoy fresh, healthy food, or visit a farm.</p>
+    </div>
+  </section>
+
+
+</div> <!-- container -->
+
+<script src="js/jquery-3.2.1.slim.min.js"></script>
+<script src="slick/slick.min.js"></script>
+<script>
+
+  $(function(){
+    $('.tm-gallery').slick({
+      dots: true,
+      infinite: true,
+      slidesToShow: 4,
+      slidesToScroll: 2,
+      responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+    });
+  });
+
+</script>
+</body>
+</html>

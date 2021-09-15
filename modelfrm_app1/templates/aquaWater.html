@@ -1,0 +1,349 @@
+<link rel="stylesheet" href="./water.css">
+<style>
+  @import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+}
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:300);
+.fa-2x {
+font-size: 2em;
+}
+.fa {
+position: relative;
+display: table-cell;
+width: 60px;
+height: 36px;
+text-align: center;
+vertical-align: middle;
+font-size:20px;
+}
+
+
+.main-menu:hover,nav.main-menu.expanded {
+width:250px;
+overflow:visible;
+}
+
+.main-menu {
+background:#212121;
+border-right:1px solid #e5e5e5;
+position:absolute;
+top:0;
+bottom:0;
+height:100%;
+left:0;
+width:60px;
+overflow:hidden;
+-webkit-transition:width .05s linear;
+transition:width .05s linear;
+-webkit-transform:translateZ(0) scale(1,1);
+z-index:1000;
+}
+
+.main-menu>ul {
+margin:7px 0;
+}
+
+.main-menu li {
+position:relative;
+display:block;
+width:250px;
+}
+
+.main-menu li>a {
+position:relative;
+display:table;
+border-collapse:collapse;
+border-spacing:0;
+color:#999;
+ font-family: arial;
+font-size: 14px;
+text-decoration:none;
+-webkit-transform:translateZ(0) scale(1,1);
+-webkit-transition:all .1s linear;
+transition:all .1s linear;
+
+}
+
+.main-menu .nav-icon {
+position:relative;
+display:table-cell;
+width:60px;
+height:36px;
+text-align:center;
+vertical-align:middle;
+font-size:18px;
+}
+
+.main-menu .nav-text {
+position:relative;
+display:table-cell;
+vertical-align:middle;
+width:190px;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.main-menu>ul.logout {
+position:absolute;
+left:0;
+bottom:0;
+}
+
+.no-touch .scrollable.hover {
+overflow-y:hidden;
+}
+
+.no-touch .scrollable.hover:hover {
+overflow-y:auto;
+overflow:visible;
+}
+
+a:hover,a:focus {
+text-decoration:none;
+}
+
+nav {
+-webkit-user-select:none;
+-moz-user-select:none;
+-ms-user-select:none;
+-o-user-select:none;
+user-select:none;
+}
+
+nav ul,nav li {
+outline:0;
+margin:0;
+padding:0;
+}
+.main-menu li:hover>a,nav.main-menu li.active>a,.dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus,.dropdown-menu>.active>a,.dropdown-menu>.active>a:hover,.dropdown-menu>.active>a:focus,.no-touch .dashboard-page nav.dashboard-menu ul li:hover a,.dashboard-page nav.dashboard-menu ul li.active a {
+color:#fff;
+background-color:#5fa2db;
+}
+.area {
+float: left;
+background: #e2e2e2;
+width: 100%;
+height: 100%;
+}
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Titillium WebLight'), local('TitilliumWeb-Light'), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v2/anMUvcNT0H1YN4FII8wpr24bNCNEoFTpS2BTjF6FB5E.woff) format('woff');
+}
+
+
+
+ /*TODO: clean it all up, finish flex, add aesthetics, icons, redefine to be relative to vh-vw, maybe rework v2 variant using scss and frames and real transitions? */
+html body {
+  background-color: lightgrey;
+  margin: 0 0 0 0;
+}
+.infocardContainer * {
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-weight: 300;
+}
+h2 {
+  font-weight: 600; font-style: italic; font-family: "Fira Sans Condensed", sans-serif;
+}
+header {
+  height: 2em;
+  background-color: #111122;
+  margin: 0 0 0 0;
+  padding: auto;
+  font-size: 2em;
+  text-align: center;
+  line-height: 2em;
+  color: white;
+}
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: #555566;
+}
+a:hover {
+  text-decoration: underline;
+}
+.infocardContainer {
+  display: flex;
+  height: 200px;
+  width: 300px;
+  border-radius: 100px;
+  background: rgb(0,159,255);
+  background: linear-gradient(121deg, rgba(255,255,255,0) 13%, rgba(0,159,255,1) 100%);
+  transition: all 500ms ease-in;
+  transition-delay: 1s;
+  margin: auto;
+  margin-top: 100px;
+  --margin-top: 100px;
+}
+.infocardContainer:hover {
+  width: 500px;
+  border-radius: 100px 10px 100px 100px;
+  transition: all 1s ease-out;
+}
+
+.infocardContainer div {
+  text-color: white;
+  flex-shrink: 1;
+  width: 100%;
+  --background-color: green;
+}
+.infocardContainer div * {
+  display: flex;
+  --flex: inherit;
+  overflow: hidden;
+  text-overflow: hidden;
+  --background-color: yellow;
+  color: white;
+  white-space: nowrap;
+  width: 0;
+  height: auto;
+  transition: all 450ms ease-in;
+  transition-delay: 1s;
+}
+.infocardContainer:hover div *{
+  --background-color: purple;
+  display: flex;
+  visibility: visible;
+  transition: all 1s ease-out;
+  transition-delay: 500ms;
+  width: 100%;
+  height: auto;
+}
+
+.infocardContainer #main, .infocardContainer #main img{
+  --background-color: red;
+  height: 200px;
+  width: 200px;
+  padding-right: 10px;
+  border-radius: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.infocardContainer #main img{
+  height: 180px;
+  width: 180px;
+  transition: none;
+  display: float;
+  position: relative;
+  border: 10px solid white;
+  margin: 0 0 0 0; padding: 0 0 0 0;
+}
+.infocardContainer #textbois {
+  position: relative;
+}
+.infocardContainer #textbois #hotlinks {
+  max-width: 80%;
+  max-height: 30px;
+
+  --background-color: white;
+  position:absolute;
+  bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 13px;
+}
+.infocardContainer #textbois #hotlinks * {
+  background-color: white;
+  max-width: 50px;
+  --margin: 0 1px 0 1px;
+  border-radius: 25px;
+}
+/*TODO: animate copy main transition style for info*/
+.infocardContainer #textbois #hotlinks *:hover {
+
+
+}
+</style>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:300,400,600i&display=swap" rel="stylesheet">
+</head>
+<header> <a href="https://codepen.io/LIMESTA/pen/VwZNmJE"> Water</a> </header>
+
+<div class="infocardContainer">
+  <div id="main">
+    <img src="https://images.unsplash.com/photo-1548109858-3d7763d13618?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80"></img>
+  </div>
+  <div id="textbois">
+    <h2>Fresh Water</h2>
+    <h4>Fresh water (or freshwater) is any naturally </h4> <h4>occurrs water except seawater,brackish water</h4>
+	    <a href="http://127.0.0.1:8000/aquaFresh/">Refernce</a>
+
+
+  </div>
+</div>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:300,400,600i&display=swap" rel="stylesheet">
+</head>
+<div class="infocardContainer">
+  <div id="main">
+    <img src="https://images.unsplash.com/photo-1547041270-d3d54e1263cb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"></img>
+  </div>
+  <div id="textbois">
+    <h2>Streams</h2>
+    <h4>large streams with good water flow</h4><h4> this may be feasible</h4>
+    <a href="http://127.0.0.1:8000/aquaStream/">Refernce</a>
+
+  </div>
+</div>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:300,400,600i&display=swap" rel="stylesheet">
+</head>
+<div class="infocardContainer">
+  <div id="main">
+    <img src="https://images.unsplash.com/photo-1595994809701-42bbf49e224b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=889&q=80"></img>
+  </div>
+  <div id="textbois">
+    <h2>Lakes</h2>
+    <h4>A fish pond is a controlled pond</h4><h4>is used in aquaculture for fish farming</h4>
+    <a href="http://127.0.0.1:8000/aquaLake/">Refernce</a>
+
+  </div>
+</div>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:300,400,600i&display=swap" rel="stylesheet">
+</head>
+<div class="infocardContainer">
+  <div id="main">
+    <img src="https://images.unsplash.com/photo-1594034280179-7eb9c0784e91?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1543&q=80"></img>
+  </div>
+  <div id="textbois">
+    <h2>Reserviors</h2>
+    <h4>A reservoir is most commonly an enlarged </h4><h4>natural created using a dam to store water </h4>
+    <a href="http://127.0.0.1:8000/aquaResevoir/">Refernce</a>
+
+  </div>
+  </div>
+  <div class="area"></div><nav class="main-menu">
+            <ul>
+                <li>
+                    <a href="http://127.0.0.1:8000/mainhome/">
+                        <i class="fa fa-home fa-2x"></i>
+                        <span class="nav-text">
+                            Home
+                        </span>
+                    </a>
+
+                </li>
+
+
+                <li>
+                    <a href="http://127.0.0.1:8000/agriculture/">
+                        <i class="fa fa-bar-chart-o fa-2x"></i>
+                        <span class="nav-text">
+                            Agriculture
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://127.0.0.1:8000/aquaculture/">
+                        <i class="fa fa-font fa-2x"></i>
+                        <span class="nav-text">
+                          Aqucaculture
+                        </span>
+                    </a>
+                </li>
+
+        </nav>

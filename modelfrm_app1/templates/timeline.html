@@ -1,0 +1,255 @@
+<style>
+    *{
+  margin: 0;
+  padding: 0;
+}
+
+.clear{
+  clear: both;
+}
+
+
+.slide-toggle{
+  display: none;
+}
+
+.slidemenu{
+  font-family: arial, sans-serif;
+  max-width: 600px;
+  margin: 50px auto;
+  overflow: hidden;
+}
+
+.slidemenu label{
+  width: 25%;
+  text-align: center;
+  display: block;
+  float: left;
+  color: #333;
+  opacity: 0.2;
+
+}
+
+.slidemenu label:hover{
+  cursor: pointer;
+  color: #666;
+}
+
+.slidemenu label span{
+  display: block;
+  padding: 10px;
+}
+
+.slidemenu label .icon{
+  font-size: 20px;
+  border: solid 2px #333;
+  text-align: center;
+  height: 50px;
+  width: 50px;
+  display: block;
+  margin: 0 auto;
+  line-height: 50px;
+  border-radius: 50%;
+}
+
+/*Bar Style*/
+
+.slider{
+  width: 100%;
+  height: 5px;
+  display: block;
+  background: #ccc;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.slider .bar{
+  width: 25%;
+  height: 5px;
+  background: #333;
+  border-radius: 5px;
+}
+
+/*Animations*/
+.slidemenu label, .slider .bar {
+  transition: all 500ms ease-in-out;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+}
+
+/*Toggle*/
+
+.slidemenu .slide-toggle:checked + label{
+  opacity: 1;
+}
+
+
+
+.slidemenu #slide-item-1:checked ~ .slider .bar{ margin-left: 0; }
+.slidemenu #slide-item-2:checked ~ .slider .bar{ margin-left: 25%; }
+.slidemenu #slide-item-3:checked ~ .slider .bar{ margin-left: 50%; }
+.slidemenu #slide-item-4:checked ~ .slider .bar{ margin-left: 75%; }
+h1 {text-align: center;}
+.timeline {
+	 display: flex;
+	 flex-direction: column;
+	 align-items: center;
+	 position: relative;
+}
+ .timeline::before {
+	 position: absolute;
+	 content: "";
+	 display: block;
+	 width: 0.4rem;
+	 height: 100%;
+	 background: #888;
+	 z-index: 1;
+}
+ .item {
+	 display: grid;
+	 grid-template-columns: 1fr min-content 1fr;
+	 grid-template-rows: 1fr;
+	 grid-template-areas: "content-left image content-right";
+	 align-items: center;
+	 position: relative;
+	 z-index: 2;
+}
+ .item + .item {
+	 margin-top: 4rem;
+}
+ .wrap {
+	 grid-area: content-left;
+	 padding: 1rem;
+	 max-width: 25rem;
+}
+ .item:nth-child(even) .wrap {
+	 grid-area: content-right;
+}
+ .img {
+	 width: 15rem;
+	 height: 15rem;
+	 background: #888;
+	 border: 0.5rem solid #888;
+	 border-radius: 50%;
+	 grid-area: image;
+	 overflow: hidden;
+}
+ .img > img {
+	 width: 100%;
+	 height: auto;
+}
+ body {
+	 padding: 2rem;
+	 line-height: 1.5;
+	 background: #fafafa;
+}
+
+</style>
+<body>
+	<nav class="slidemenu">
+
+  <!-- Item 1 -->
+  <input type="radio" name="slideItem" id="slide-item-1" class="slide-toggle"  checked/>
+  <label   for="slide-item-1"><a href="http://127.0.0.1:8000/mainhome/"    class="icon">★</a><span >Home</span></label>
+
+  <!-- Item 2 -->
+  <input type="radio" name="slideItem" id="slide-item-2" class="slide-toggle"/>
+
+  <label for="slide-item-2"><a href="http://127.0.0.1:8000/agriculture/" class="icon">★</a ><span>Agriculture</span></label>
+
+  <!-- Item 3 -->
+  <input type="radio" name="slideItem" id="slide-item-3" class="slide-toggle"/>
+  <label for="slide-item-3"><a  href="http://127.0.0.1:8000/aquaculture/"class="icon">★</a><span>Aquaculture</span></label>
+
+  <!-- Item 4 -->
+  <input type="radio" name="slideItem" id="slide-item-4" class="slide-toggle"/>
+  <label for="slide-item-4"><a href="http://127.0.0.1:8000/image/" class="icon">★</a><span>Blog</span></label>
+
+  <div class="clear"></div>
+
+  <!-- Bar -->
+  <div class="slider">
+    <div class="bar"></div>
+  </div>
+
+</nav>
+</body>
+<h1>Timeline of Growing Fish</h1>
+<div class="timeline">
+	<div class="item">
+		<div class="img"><img src="https://5.imimg.com/data5/SE/UA/PI/ANDROID-58200973/images-jpeg-500x500.jpeg"></div>
+		<div class="wrap">
+			<div class="date">BroodStock</div>
+			<h3 class="title">+2 Years</h3>
+			<div class="content">
+				<p>Broodstock are adult fish used for breeding. ... Injured fish can get an infection, and may die. Fish with eggs will not spawn if handled roughly. Hatcheries without broodstock have to collect adult fish from nearby ponds, tanks or small reservoirs.</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="item">
+		<div class="img"><img src="https://5.imimg.com/data5/KR/HT/MY-41744084/rohu-fish-500x500.jpg"></div>
+		<div class="wrap">
+			<div class="date">Hatchery</div>
+			<h3 class="title">Fish Hatchery</h3>
+			<div class="content">
+				<p>A fish hatchery is a place for artificial breeding, egg hatching, and rearing across the early life stages of aquatic animals (e.g. finfish and crustaceans). ... These young small fish are then transferred to an on-growing section to reach harvest size.</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="item">
+		<div class="img"><img src="https://5.imimg.com/data5/JP/JO/MY-20261911/spawn-rohu-fish-500x500.jpg"></div>
+		<div class="wrap">
+			<div class="date">spawning</div>
+			<h3 class="title">Spawn</h3>
+			<div class="content">
+				<p>Spawn is the eggs and sperm released or deposited into water by aquatic animals. ... The process of spawning typically involves females releasing ova (unfertilized eggs) into the water, often in large quantities, while males simultaneously or sequentially release spermatozoa (milt) to fertilize the eggs.</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="item">
+		<div class="img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjz3GvowAc1JsTyatJcpKiLw00YLSt5rcafA&usqp=CAU"></div>
+		<div class="wrap">
+			<div class="date">Nursery</div>
+			<h3 class="title">15 - 20 Days(Fry)/h3>
+			<div class="content">
+				<p>An incomplete-system pond farm where young fish are raised for subsequent transfer to fish farms, where market weight is attained.</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="item">
+		<div class="img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBDEa8qufeiM9Htv5GGOiVlPhjlrxB6jOrkA&usqp=CAU"></div>
+		<div class="wrap">
+			<div class="date">Fingerlings</div>
+			<h3 class="title">60 - 90 Days</h3>
+			<div class="content">
+				<p>When they have developed to the point where they are capable of feeding themselves, the fish are called fry. When, in addition, they have developed scales and working fins, the transition to a juvenile fish is complete and it is called a fingerling. Fingerlings are typically about the size of fingers.</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="item">
+		<div class="img"><img src="https://thumbs.dreamstime.com/b/fish-ponds-palm-tree-lanscape-tasikmalaya-village-indonesia-fish-ponds-palm-tree-lanscape-tasikmalaya-village-208164113.jpg"></div>
+		<div class="wrap">
+			<div class="date">Growing Out Systems</div>
+			<h3 class="title">10 - 12 Months</h3>
+			<div class="content">
+				<p>There are four main aquaculture grow out systems/techniques (or combinations of these). These four aquaculture grow out techniques are pond, cage, flow through or RAS. Based upon the climate, availability of water, land and electricity the decision of aquaculture grow out systems are made.</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="item">
+		<div class="img"><img src="https://images.unsplash.com/photo-1580317092109-12571feb44f3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"></div>
+		<div class="wrap">
+			<div class="date">Market</div>
+			<h3 class="title">Fish Market</h3>
+			<div class="content">
+				<p>Retail fish markets, a type of wet market, often sell street food as well. Fish markets range in size from small fish stalls.</p>
+			</div>
+		</div>
+	</div>
+</div>

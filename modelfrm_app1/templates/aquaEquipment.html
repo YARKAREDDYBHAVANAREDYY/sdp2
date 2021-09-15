@@ -1,0 +1,312 @@
+<style>
+    *{
+  margin: 0;
+  padding: 0;
+}
+
+.clear{
+  clear: both;
+}
+
+
+.slide-toggle{
+  display: none;
+}
+
+.slidemenu{
+  font-family: arial, sans-serif;
+  max-width: 600px;
+  margin: 50px auto;
+  overflow: hidden;
+}
+
+.slidemenu label{
+  width: 25%;
+  text-align: center;
+  display: block;
+  float: left;
+  color: #333;
+  opacity: 0.2;
+
+}
+
+.slidemenu label:hover{
+  cursor: pointer;
+  color: #666;
+}
+
+.slidemenu label span{
+  display: block;
+  padding: 10px;
+}
+
+.slidemenu label .icon{
+  font-size: 20px;
+  border: solid 2px #333;
+  text-align: center;
+  height: 50px;
+  width: 50px;
+  display: block;
+  margin: 0 auto;
+  line-height: 50px;
+  border-radius: 50%;
+}
+
+/*Bar Style*/
+
+.slider{
+  width: 100%;
+  height: 5px;
+  display: block;
+  background: #ccc;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.slider .bar{
+  width: 25%;
+  height: 5px;
+  background: #333;
+  border-radius: 5px;
+}
+
+/*Animations*/
+.slidemenu label, .slider .bar {
+  transition: all 500ms ease-in-out;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+}
+
+/*Toggle*/
+
+.slidemenu .slide-toggle:checked + label{
+  opacity: 1;
+}
+
+
+
+.slidemenu #slide-item-1:checked ~ .slider .bar{ margin-left: 0; }
+.slidemenu #slide-item-2:checked ~ .slider .bar{ margin-left: 25%; }
+.slidemenu #slide-item-3:checked ~ .slider .bar{ margin-left: 50%; }
+.slidemenu #slide-item-4:checked ~ .slider .bar{ margin-left: 75%; }
+
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400|Poppins:300,400,800&display=swap");
+
+html {
+  --border-color: #35838d;
+  --hover-color: #fe4c4a;
+  --button-color: #70abaf;
+  --button-text-color: #fff;
+  --h2-color: #012e33;
+}
+  body {
+  font-family: "Poppins";
+}
+.grid-container {
+  display: grid;
+  grid-row-gap: 25px;
+  grid-template-columns: repeat(4, 1fr);
+}
+.grid-card {
+  display: grid;
+  grid-template-rows: 1fr 1fr 0.15fr auto;
+  border: solid 2px var(--border-color);
+  margin: 0px 15px;
+}
+.image {
+  background-size: cover;
+  background-position: center center;
+}
+.image:hover {
+  transform: translatey(-5px) translatex(-5px) scale(1.15);
+}
+.image-1 {
+  background-image: url(https://5.imimg.com/data5/EF/IN/QR/SELLER-2332759/diffused-aeration-system-500x500.jpg);
+}
+.image-2 {
+  background-image: url(https://cms.esi.info/Media/productImages/tn/29064_1433334850404_PF.jpg);
+}
+.image-3 {
+  background-image: url(https://secondhandforfish.com/image/cache/catalog/products/feeding/feeder_cj_1_01-600x667.jpg);
+}
+.image-4 {
+  background-image: url(https://secondhandforfish.com/image/cache/catalog/products/feeding/feeder_cj_1p_01-600x667.jpg);
+}
+.image-5 {
+  background-image: url(https://secondhandforfish.com/image/cache/catalog/products/feeding/feeders_01-600x667.jpg);
+}
+.image-6 {
+  background-image: url(https://secondhandforfish.com/image/cache/catalog/products/feeding/fiap_feeders_01-600x667.jpg);
+}
+.image-7 {
+  background-image: url(https://secondhandforfish.com/image/cache/catalog/products/pumps/fish_pumps/bluecomfort_p16_01-600x667.jpg);
+}
+.image-8 {
+  background-image: url(https://secondhandforfish.com/image/cache/catalog/products/water_treatment/rk_biomedia_01-600x667.jpg);
+}
+.text {
+  margin: 10px 10px;
+}
+h2 {
+  color: var(--h2-color);
+}
+h2:hover {
+  color: var(--hover-color);
+  cursor: pointer;
+}
+.published {
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+  margin: 10px;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+span {
+  color: var(--hover-color);
+  margin-left: 5px;
+}
+
+.button-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  margin: 10px;
+  color: var(--button-text-color);
+  background-color: var(--button-color);
+}
+.button-info:hover {
+  background-color: var(--hover-color);
+  cursor: pointer;
+}
+@media screen and (max-width: 1020px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+</style>
+<body>
+ <nav class="slidemenu">
+
+  <!-- Item 1 -->
+  <input type="radio" name="slideItem" id="slide-item-1" class="slide-toggle"  checked/>
+  <label   for="slide-item-1"><a href="http://127.0.0.1:8000/mainhome/"    class="icon">★</a><span >Home</span></label>
+
+  <!-- Item 2 -->
+  <input type="radio" name="slideItem" id="slide-item-2" class="slide-toggle"/>
+
+  <label for="slide-item-2"><a href="http://127.0.0.1:8000/agriculture/" class="icon">★</a ><span>Agriculture</span></label>
+
+  <!-- Item 3 -->
+  <input type="radio" name="slideItem" id="slide-item-3" class="slide-toggle"/>
+  <label for="slide-item-3"><a  href="http://127.0.0.1:8000/aquaculture/"class="icon">★</a><span>Aquaculture</span></label>
+
+  <!-- Item 4 -->
+  <input type="radio" name="slideItem" id="slide-item-4" class="slide-toggle"/>
+  <label for="slide-item-4"><a href="http://127.0.0.1:8000/image/" class="icon">★</a><span>Blog</span></label>
+
+  <div class="clear"></div>
+
+  <!-- Bar -->
+  <div class="slider">
+    <div class="bar"></div>
+  </div>
+
+</nav>
+</body>
+<div class="grid-container">
+      <div class="grid-card">
+        <div class="image image-1"></div>
+        <div class="text">
+          <h2>LOW-PRESSURE DIFFUSER</h2>
+          <p>
+            • Used for degassing and aeration of water at 80 cm water depth
+            • Optimization of the gas level in the water contributes to improved feeding and an increased fish welfare
+            • Are produced according to customer specifications
+            • Can be produced for either fixed or floating installation
+          </p>
+        </div>
+      </div>
+      <div class="grid-card">
+        <div class="image image-2"></div>
+        <div class="text">
+          <h2>LOW-PRESSURE DIFFUSER WITH INCREASED WATER-FLOW</h2>
+          <p>
+            • Used for degassing and aeration of water at a depth of 80 cm
+            • Will increases the water flow by approx. 40 l/s per m² low-pressure diffuser
+            • Optimization of the gas level in the water will contribute to an improvement in feeding and will increase fish welfare
+            • The higher water flow will contribute to a better removal of faeces and an increase in fish welfare
+            • Are made to customer specifications
+            • Can be made for either fixed or floating installation
+          </p>
+        </div>
+      </div>
+      <div class="grid-card">
+        <div class="image image-3"></div>
+        <div class="text">
+          <h2>CJ FEEDER 1</h2>
+          <p>
+            • Indoor automatic feeder
+            • Motorized disc-feeder
+            • Used for granules and pelletized feed
+            • Reliable feeder
+            • Minimum maintenance
+          </p>
+        </div>
+      </div>
+      <div class="grid-card">
+        <div class="image image-4"></div>
+        <div class="text">
+          <h2>CJ FEEDER 1P</h2>
+          <p>
+            • Indoor feeder with pendulum
+            • Used for granules and pelletized feed
+            • Reliable feeder
+            • Minimum maintenance
+          </p>
+        </div>
+      </div>
+
+      <div class="grid-card">
+        <div class="image image-5"></div>
+        <div class="text">
+          <h2>Complete Feeders (5 Liters)</h2>
+          <p>
+            Complete Feeders (5 liters)..
+          </p>
+        </div>
+      </div>
+      <div class="grid-card">
+        <div class="image image-6"></div>
+        <div class="text">
+          <h2>FIAP Feeders 40L</h2>
+          <p>
+            Like new condition, used for only 1 week.Capacity: 40 liters. Feeders include pendlum & lid.
+          </p>
+        </div>
+      </div>
+      <div class="grid-card">
+        <div class="image image-7"></div>
+        <div class="text">
+          <h2>Blue Comfort P16 Vacuum Fish Pump</h2>
+          <p>
+            Save time and effort with a dependable fish pump that is easy to operate. The pump is operational as soon as it is connected to an electrical power source. The pipes running through the pump are designed to ensure that the pump does not harm the fish.The pump’s construction is simple and does not include complicated electronics, making it easy to repair and durable even in tough operating conditio..
+          </p>
+        </div>
+      </div>
+      <div class="grid-card">
+        <div class="image image-8"></div>
+        <div class="text">
+          <h2>Moving Bed Material (Light)</h2>
+          <p>
+            Efficient bio-media for biological water purification. Used in up-flow and moving bed filters.Density0.93 g/cm3Volume weight158 kg/m3Pieces per cubic meter255 000Specific surface area (m2 / m3)750..
+          </p>
+        </div>
+      </div>
+    </div>

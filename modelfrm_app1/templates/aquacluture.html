@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Aquaculture</title>
+  <script>
+    if (document.documentMode || /Edge/.test(navigator.userAgent)) {
+        alert('Please use Chrome or Firefox for best browsing experience!');
+    }
+  </script>
+
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'https://fonts.googleapis.com/css?family=Open+Sans:300,400'%}">  <!-- Google web font "Open Sans" -->
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">                                      <!-- https://getbootstrap.com/ -->
+  <link rel="stylesheet" href="{% static 'css/fontawesome-all.min.css'%}">                                <!-- Font awesome -->
+  <link rel="stylesheet" href="{% static 'slick/slick.css'%}">
+  <link rel="stylesheet" href="{% static 'slick/slick-theme.css'%}">
+  <link rel="stylesheet" href="{% static 'css/template-style.css'%}">
+    <!-- Templatemo style -->
+
+</head>
+
+<body>
+
+
+  <body><div class="area"></div><nav class="main-menu">
+            <ul>
+                <li>
+                    <a href="http://127.0.0.1:8000/mainhome/">
+                        <i class="fa fa-home fa-2x"></i>
+                        <span class="nav-text">
+                            Home
+                        </span>
+                    </a>
+
+                <li class="has-subnav">
+                    <a href="http://127.0.0.1:8000/agriculture/">
+                       <i class="fa fa-crop fa-2x"></i>
+
+                        <span class="nav-text">
+                             Agriculture
+                        </span>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="http://127.0.0.1:8000/agriseeds/">
+                        <i class="fa fa-bar-chart-o fa-2x"></i>
+                        <span class="nav-text">
+                            seed Details
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://127.0.0.1:8000/agriOrganic/">
+                        <i class="fa fa-bar-chart-o fa-2x"></i>
+                        <span class="nav-text">
+                           Fertilizers Details
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://127.0.0.1:8000/agriEquipment/">
+                        <i class="fa fa-bar-chart-o fa-2x"></i>
+                        <span class="nav-text">
+                            Agriculture Equipment
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://127.0.0.1:8000/agriweather/">
+                        <i class="fa fa-bar-chart-o fa-2x"></i>
+                        <span class="nav-text">
+                            Weather Forecasting
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://127.0.0.1:8000/agriSoil/">
+                        <i class="fa fa-bar-chart-o fa-2x"></i>
+                        <span class="nav-text">
+                            Soil Details
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://127.0.0.1:8000/predict/">
+                        <i class="fa fa-bar-chart-o fa-2x"></i>
+                        <span class="nav-text">
+                            Prediction
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://127.0.0.1:8000/agriirrigation/">
+                        <i class="fa fa-bar-chart-o fa-2x"></i>
+                        <span class="nav-text">
+                            Irrigation
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://127.0.0.1:8000/show/">
+                        <i class="fa fa-bar-chart-o fa-2x"></i>
+                        <span class="nav-text">
+                            Fertilizer Best Options
+                        </span>
+                    </a>
+                </li>
+                 <li>
+                    <a href="http://127.0.0.1:8000/Fpredict/">
+                        <i class="fa fa-bar-chart-o fa-2x"></i>
+                        <span class="nav-text">
+                            Fertilizer Prediction
+                        </span>
+                    </a>
+                </li>
+                <li class="has-subnav">
+                    <a href="http://127.0.0.1:8000/aquaculture/">
+                       <i class="fa fa-industry fa-2x"></i>
+                        <span class="nav-text">
+                            Aquaculture
+                        </span>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="http://127.0.0.1:8000/timeline/">
+                        <i class="fa fa-bar-chart-o fa-2x"></i>
+                        <span class="nav-text">
+                            Aquatic Animals Timeline
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://127.0.0.1:8000/aquafertilizers/">
+                        <i class="fa fa-bar-chart-o fa-2x"></i>
+                        <span class="nav-text">
+                            Fertilizers
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://127.0.0.1:8000/aquaEquipment/">
+                        <i class="fa fa-bar-chart-o fa-2x"></i>
+                        <span class="nav-text">
+                            Equipment
+                        </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="http://127.0.0.1:8000/aquaWater/">
+                        <i class="fa fa-bar-chart-o fa-2x"></i>
+                        <span class="nav-text">
+                            Water Details
+                        </span>
+                    </a>
+                </li>
+
+            <ul class="logout">
+                <li>
+                   <a href="http://127.0.0.1:8000/">
+                         <i class="fa fa-power-off fa-2x"></i>
+                        <span class="nav-text">
+                            Logout
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+  </body>
+
+  <!-- Loader -->
+  <div id="loader-wrapper">
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+  </div>
+
+  <div class="container">
+    <div class="tm-top-bar"></div>
+
+    <!-- Welcome section -->
+    <section class="tm-welcome">
+
+      <div class="tm-welcome-left">
+        <!-- Logo -->
+        <div class="tm-logo">
+          <h1 class="tm-site-name"></h1>
+            <img src="{% static 'images/logo-bg.png' %}"  width="370px" height="370px"   />
+        </div>
+        <div class="tm-welcome-content">
+          <!-- fa icons -->
+          <div class="tm-welcome-icons-container">
+
+          </div>
+
+          <h2 class="tm-mb-25">Aquaculture</h2>
+          <p class="tm-font-big"><a rel="nofollow"/><p>Agriculture and aquaculture system is the website application which was built for the utilization of both the farmers and also for the common man who was willing to invest money in agriculture."</p>
+          <a href="#" class="tm-welcome-link tm-font-big"></a>
+        </div>
+      </div>
+      <div class="tm-welcome-right"></div>
+
+    </section>
+    <div class="tm-bar-2"></div>
+
+    <section class="row tm-section-mb tm-section-2">
+      <div class="col-md-12 tm-section-2-inner">
+        <div class="tm-section-2-left">
+              <div class="tm-img-container tm-img-container-1"></div>
+             <figure><img src="{% static 'images/aquaculture (6).jpg'%}"></figure>
+              <div class="tm-img-container tm-img-container-2"></div>
+             <figure><img src="{% static 'images/aquaculture (5).jpg'%}"></figure>
+        </div>
+        <div class="tm-section-2-right tm-bg-primary">
+          <div class="tm-section-2-text">
+            <h2 class="tm-section-2-header tm-mb-45">Aquatic Animals Timeline</h2>
+            <p>Scientists estimate that about one million species of animals live in the ocean. But most of them—95 percent—are invertebrates, animals that don't have a backbone, such as jellyfish and shrimp.</p>
+                <a href="http://127.0.0.1:8000/timeline/" class="d-block tm-welcome-link">Continue...</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="row tm-section-3">
+      <div class="col-md-12 tm-section-3-inner">
+        <div class="tm-section-3-left tm-bg-primary">
+          <div class="tm-section-3-text">
+            <h2 class="tm-section-3-header tm-mb-35">Fertilizers Details</h2>
+            <p>Common organic fertilizers used in aquaculture are poultry, cow and pig dung but cottonseed meal, rice straw and other agricultural waste products can also be used. Inorganic fertilizers are usually applied on a weekly or bi-weekly basis.</p>
+            <a href="http://127.0.0.1:8000/aquafertilizers/" class="d-block tm-welcome-link">Continue...</a>
+          </div>
+        </div>
+        <div class="tm-section-3-right">
+            <figure><img src="{% static 'images/aquaculture (2).jpg'%}"  width="100%" height="550"></figure>
+          <div class="tm-img-container tm-img-container-3"></div>
+            <div class="tm-img-container tm-img-container-2"></div>
+        </div>
+      </div>
+  </section>
+
+  <section class="row tm-section-mb tm-section-4">
+      <div class="col-md-12 tm-section-2-inner">
+        <div class="tm-section-2-left">
+            <figure><img src="{% static 'images/aquaculture (3).jpg'%}"></figure>
+              <div class="tm-img-container tm-img-container-4"></div>
+              <figure><img src="{% static 'images/aquaculture (4).jpg'%}" ></figure>
+              <div class="tm-img-container tm-img-container-5"></div>
+        </div>
+        <div class="tm-section-2-right tm-bg-primary">
+          <div class="tm-section-2-text">
+            <h2 class="tm-section-2-header tm-mb-45">Equipment</h2>
+            <p>Most of the maintenance and repair works in fish farms are devoted to dikes. Practically, the same implements in manual construction work are also being used in making repairs of dikes. Digging tools, flatboats, wooden dugouts and rafts are most appropriate for work like digging out trenches and backfilling them with puddled soil to repair leakage/seepage, and for deepening canals and other similar jobs.</p>
+                <a href="http://127.0.0.1:8000/aquaEquipment/" class="d-block tm-welcome-link">Continue...</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="row tm-section-6">
+      <div class="col-md-12 tm-section-3-inner">
+        <div class="tm-section-3-left tm-bg-primary">
+          <div class="tm-section-3-text">
+            <h2 class="tm-section-3-header tm-mb-35">Water Details</h2>
+            <p>Aquaculture, Freshwater .Ponds are the most common systems for aquaculture, but raceways and other flowing water systems, cages, and net pens are also important. Water reuse systems are used less frequently, but these systems will likely be more common in the future.</p>
+                <a href="http://127.0.0.1:8000/aquaWater/" class="d-block tm-welcome-link">Continue...</a>
+          </div>
+        </div>
+        <div class="tm-section-3-right">
+             <figure><img src="{% static 'images/aquaculture (9).jpg'%}" ></figure>
+          <div class="tm-img-container tm-img-container-6"></div>
+        </div>
+      </div>
+  </section>
+
+
+
+
+
+
+  <section class="row tm-section-pt tm-section-pb">
+    <div class="col-md-6 mx-auto text-center">
+      <h2 class="tm-text-dark tm-mb-50">THE COMMUNITY</h2>
+      <p class="tm-text-light-dark tm-font-big">The purpose of this building block is to provide Blue Ventures' partner community members with new sources of income, allowing improved access to food and education, while alleviating pressure on fisheries and marine biodiversity.</p>
+    </div>
+  </section>
+
+
+</div> <!-- container -->
+
+<script src="js/jquery-3.2.1.slim.min.js"></script>
+<script src="slick/slick.min.js"></script>
+<script>
+
+  $(function(){
+    $('.tm-gallery').slick({
+      dots: true,
+      infinite: true,
+      slidesToShow: 4,
+      slidesToScroll: 2,
+      responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+    });
+  });
+
+</script>
+</body>
+</html>

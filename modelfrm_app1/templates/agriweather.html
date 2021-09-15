@@ -1,0 +1,431 @@
+<style>
+    *{
+  margin: 0;
+  padding: 0;
+}
+
+.clear{
+  clear: both;
+}
+
+
+.slide-toggle{
+  display: none;
+}
+
+.slidemenu{
+  font-family: arial, sans-serif;
+  max-width: 600px;
+  margin: 50px auto;
+  overflow: hidden;
+}
+
+.slidemenu label{
+  width: 25%;
+  text-align: center;
+  display: block;
+  float: left;
+  color: #333;
+  opacity: 0.2;
+
+}
+
+.slidemenu label:hover{
+  cursor: pointer;
+  color: #666;
+}
+
+.slidemenu label span{
+  display: block;
+  padding: 10px;
+}
+
+.slidemenu label .icon{
+  font-size: 20px;
+  border: solid 2px #333;
+  text-align: center;
+  height: 50px;
+  width: 50px;
+  display: block;
+  margin: 0 auto;
+  line-height: 50px;
+  border-radius: 50%;
+}
+
+/*Bar Style*/
+
+.slider{
+  width: 100%;
+  height: 5px;
+  display: block;
+  background: #ccc;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.slider .bar{
+  width: 25%;
+  height: 5px;
+  background: #333;
+  border-radius: 5px;
+}
+
+/*Animations*/
+.slidemenu label, .slider .bar {
+  transition: all 500ms ease-in-out;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+}
+
+/*Toggle*/
+
+.slidemenu .slide-toggle:checked + label{
+  opacity: 1;
+}
+
+
+
+.slidemenu #slide-item-1:checked ~ .slider .bar{ margin-left: 0; }
+.slidemenu #slide-item-2:checked ~ .slider .bar{ margin-left: 25%; }
+.slidemenu #slide-item-3:checked ~ .slider .bar{ margin-left: 50%; }
+.slidemenu #slide-item-4:checked ~ .slider .bar{ margin-left: 75%; }
+
+/* Import the google web fonts you want to use */
+
+
+@import url('https://fonts.googleapis.com/css?family=Comfortaa|Patua+One');
+
+/* Card Based Layout - Base styles */
+
+body {
+  background: hsl(0, 0%, 90%);
+}
+
+/*--------------------------------------------------------------
+Typography
+--------------------------------------------------------------*/
+body,
+button,
+input,
+select,
+textarea {
+  color: #404040;
+  font-family: 'Comfortaa', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+  font-family: 'Patua One', serif;
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-size: 1rem;
+  color: #007489;
+}
+
+p {
+  margin-bottom: 1.5em;
+  color: #898989;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+dfn,
+cite,
+em,
+i {
+  font-style: italic;
+}
+
+blockquote {
+  margin: 0 1.5em;
+}
+
+address {
+  margin: 0 0 1.5em;
+}
+
+pre {
+  background: #eee;
+  font-family: "Courier 10 Pitch", Courier, monospace;
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1.6em;
+}
+
+code,
+kbd,
+tt,
+var {
+  font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+abbr,
+acronym {
+  border-bottom: 1px dotted #666;
+  cursor: help;
+}
+
+mark,
+ins {
+  background: #fff9c0;
+  text-decoration: none;
+}
+
+sup,
+sub {
+  font-size: 75%;
+  height: 0;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  bottom: 1ex;
+}
+
+sub {
+  top: .5ex;
+}
+
+small {
+  font-size: 75%;
+}
+
+big {
+  font-size: 125%;
+}
+
+.masthead {
+  background-color: #005b75;
+}
+
+.masthead p, .masthead p a {
+  color: white;
+}
+
+.site-title {
+  color: white;
+}
+
+img {
+  display: block;
+  border: 0;
+  width: 100%;
+  height: auto;
+}
+
+
+.card {
+  background: white;
+  margin-bottom: 2em;
+}
+
+.card a {
+  color: black;
+  text-decoration: none;
+}
+
+.card a:hover {
+  box-shadow: 3px 3px 8px hsl(0, 0%, 80%);
+}
+
+.card-content {
+  padding: 1.4em;
+}
+
+.card-content h2 {
+  margin-top: 0;
+  margin-bottom: .5em;
+  font-weight: bold;
+}
+
+.card-content p {
+  font-size: 80%;
+}
+
+/* Flexbox stuff */
+
+.cards {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+
+.card {
+  flex: 0 1 24%;
+}
+
+
+</style>
+<body>
+    <a class="weatherwidget-io" href="https://forecast7.com/en/16d5180d65/vijayawada/" data-label_1="VIJAYAWADA" data-label_2="WEATHER" data-theme="original" >VIJAYAWADA WEATHER</a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
+    <nav class="slidemenu">
+
+  <!-- Item 1 -->
+  <input type="radio" name="slideItem" id="slide-item-1" class="slide-toggle"  checked/>
+  <label   for="slide-item-1"><a href="http://127.0.0.1:8000/mainhome/"    class="icon">★</a><span >Home</span></label>
+
+  <!-- Item 2 -->
+  <input type="radio" name="slideItem" id="slide-item-2" class="slide-toggle"/>
+
+  <label for="slide-item-2"><a href="http://127.0.0.1:8000/agriculture/" class="icon">★</a ><span>Agriculture</span></label>
+
+  <!-- Item 3 -->
+  <input type="radio" name="slideItem" id="slide-item-3" class="slide-toggle"/>
+  <label for="slide-item-3"><a  href="http://127.0.0.1:8000/aquaculture/"class="icon">★</a><span>Aquaculture</span></label>
+
+  <!-- Item 4 -->
+  <input type="radio" name="slideItem" id="slide-item-4" class="slide-toggle"/>
+  <label for="slide-item-4"><a href="http://127.0.0.1:8000/image/" class="icon">★</a><span>Blog</span></label>
+
+  <div class="clear"></div>
+
+  <!-- Bar -->
+  <div class="slider">
+    <div class="bar"></div>
+  </div>
+
+</nav>
+</body>
+<header class="masthead clear">
+    <link rel="stylesheet" href="styles.css">
+        <div class="centered">
+        </div><!-- .centered -->
+    </header><!-- .masthead -->
+
+    <main class="main-area">
+
+        <div class="centered">
+
+            <section class="cards">
+
+                <article class="card">
+                    <a href="#">
+                        <picture class="thumbnail">
+                            <img src="https://images.unsplash.com/photo-1549888728-c4df900ccba7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt="A banana that looks like a bird">
+                        </picture>
+                        <div class="card-content">
+
+                            <h2>RICE</h2>
+                            <p>In India rice is grown under widely varying conditions of altitude and climate. Rice cultivation in India extends from 8 to35ºN latitude and from sea level to as high as 3000 meters. Rice crop needs a hot and humid climate. It is best suited to regions which have high humidity, prolonged sunshine and an assured supply of water. The average temperature required throughout the life period of the crop ranges from 21 to 37º C. Maximum temp which the crop can tolerate 400C to 42 0C.</p>
+                        </div><!-- .card-content -->
+                    </a>
+                </article><!-- .card -->
+
+                <article class="card">
+                    <a href="#">
+                        <picture class="thumbnail">
+                            <img src="https://images.unsplash.com/photo-1437252611977-07f74518abd7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=667&q=80" alt="Norwegian boller">
+                        </picture>
+                        <div class="card-content">
+                            <h2>WHEAT</h2>
+                            <p>The best wheat are produced in areas favoured with cool, moist weather during the major portion of the growing period followed by dry, warm weather to enable the grain to ripen properly. The optimum temperature range for ideal germination of wheat seed is 20-25 C though the seeds can germinate in the temperature range 3.5 to 35 c. Rains just after sowing hamper germination and encourage seedling blight. Areas with a warm and damp climate are not suited for wheat growing.Wheat plant requires about 14-15 c optimum average temperature at the time of ripening</p>
+                        </div><!-- .card-content -->
+                    </a>
+                </article><!-- .card -->
+
+                <article class="card">
+                    <a href="#">
+                        <picture class="thumbnail">
+                            <img src="https://images.unsplash.com/photo-1571646302210-db7990b30751?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80" alt="A dinosaur wearing an aluminium jacket">
+                        </picture>
+                        <div class="card-content">
+                            <h2>MAIZE</h2>
+                            <p>Maize is grown in temperatures between 18°C and 27°C during the day and around 14°C during the night. But the most important factor is the 140 frost-free days. The crop is very susceptible to frost; therefore, its cultivation in temperate latitudes is limited.Maize is grown mostly in regions having annual rainfall between 60 cm to 110 cm. But it is also grown in areas having rainfall of about 40 cm. In India, maize is traditionally grown in monsoon (Kharif) season, which is accompanied by high temperature (<35° C) and rainfall. </p>
+                        </div><!-- .card-content -->
+                    </a>
+                </article><!-- .card -->
+
+                <article class="card">
+                    <a href="#">
+                        <picture class="thumbnail">
+                            <img src="https://5.imimg.com/data5/AS/UX/GLADMIN-25013297/pulses-and-beans-500x500.jpg" alt="Chocolate filled boller">
+                        </picture>
+                        <div class="card-content">
+                            <h2>PULSES</h2>
+                            <p>Pulse crops are cultivated in Kharif, Rabi and Zaid seasons of the Agricultural year. Rabi crops require mild cold climate during sowing period, during vegetative to pod development cold climate and during maturity / harvesting warm climate. Similarly, Kharif pulse crops require warm climate throughout their life from sowing to harvesting. Summer pulses are habitants of warm climate. Seed is required to pass many stages to produce seed like germination, seedling, vegetative, flowering, fruit setting, pod development and grain maturity / harvesting.</p>
+                        </div><!-- .card-content -->
+                    </a>
+                </article><!-- .card -->
+        </div><!-- .centered -->
+    </header><!-- .masthead -->
+
+    <main class="main-area">
+
+        <div class="centered">
+
+            <section class="cards">
+
+                <article class="card">
+                    <a href="#">
+                        <picture class="thumbnail">
+                            <img src="https://images.unsplash.com/photo-1610428011552-734764c290ee?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=375&q=80" alt="A banana that looks like a bird">
+                        </picture>
+                        <div class="card-content">
+
+                            <h2>JUTE</h2>
+                            <p>The suitable climate for growing jute is a warm and wet climate, which is offered by the monsoon climate during the fall season, immediately followed by summer. Temperatures ranging to more than 25 °C and relative humidity of 70%–90% are favorable for successful cultivation.</p>
+                        </div><!-- .card-content -->
+                    </a>
+                </article><!-- .card -->
+
+                <article class="card">
+                    <a href="#">
+                        <picture class="thumbnail">
+                            <img src="https://www.gardeningknowhow.com/wp-content/uploads/2018/07/prune-sugarcane.jpg" alt="Norwegian boller">
+                        </picture>
+                        <div class="card-content">
+                            <h2>SUGARCANE</h2>
+                            <p>Temperature for different critical stages of sugarcane: The different critical stages are germination, tillering, early growth, active growth and elongation. Optimum temperature for sprouting (germination) of stem cuttings is 32° to 38°c. It slows down below 25°, reaches plateau between 30°-34°. Temperatures above 38° reduce the rate of photosynthesis and increase respiration. For ripening, however, relatively low temperatures in the range of 12° to 14° are desirable.</p>
+                        </div><!-- .card-content -->
+                    </a>
+                </article><!-- .card -->
+
+                <article class="card">
+                    <a href="#">
+                        <picture class="thumbnail">
+                            <img src="https://images.unsplash.com/photo-1577451345851-8ef9c2c1c97f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=334&q=80" alt="A dinosaur wearing an aluminium jacket">
+                        </picture>
+                        <div class="card-content">
+                            <h2>COTTON</h2>
+                            <p>Cotton is a tropical crop and it is raised in India as a Kharif crop. Cotton requires uniformly high temperature between 21 degree Celsius and 30 degree Celsius. During October, the day temperature should be above 26 degree Celsius which helps the ripening and bursting of cotton balls under the sunny skies.
+                            Annual rainfall of 55-100 cm is ideal for cotton Cultivation. Rainfall during harvesting is harmful.</p>
+                        </div><!-- .card-content -->
+                    </a>
+                </article><!-- .card -->
+
+                <article class="card">
+                    <a href="#">
+                        <picture class="thumbnail">
+                            <img src="https://images.unsplash.com/photo-1530592126211-8294b41580ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=333&q=80" alt="Chocolate filled boller">
+                        </picture>
+                        <div class="card-content">
+                            <h2>COFFEE</h2>
+                            <p>Ideal climatic conditions to grow coffee are related to temperature and rainfall; temperatures in the range of 73 °F (23 °C) and 82 °F (28 °C) with rainfall incidence in the range of 60–80 inches (1.5–2.0 m) followed by a dry spell of 2–3 months suit the Arabica variety.</p>
+                        </div><!-- .card-content -->
+
+            </section><!-- .cards -->
+
+        </div><!-- .centered -->
+
+    </main>
